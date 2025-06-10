@@ -3,9 +3,10 @@
 namespace App\Animals;
 
 use App\Animal;
-class Fish extends Animal{
+
+class Whale extends Animal{
 
     public function getNoise(): string{
-        return "bloubloublou";
+        return "whouuuuuu";
     }
 }
