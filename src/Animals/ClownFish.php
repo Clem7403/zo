@@ -2,4 +2,7 @@
 
 namespace App\Animals;
 
-class ClownFish extends Fish{}
+use App\Interfaces;
+use App\Interfaces\CanSwim;
+
+class ClownFish extends Fish implements CanSwim{}

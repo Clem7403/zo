@@ -9,13 +9,12 @@ use App\Animals\BubbleFish;
 use App\Animals\Dove;
 use App\Animals\Parrot;
 use App\Animals\Zebra;
+use App\Enclosure;
+use App\Zoo;
 
 
-
-$animals = [];
-
-$animals = [
-    Fish::class=> 5,
+$animalQuantite= [
+    Fish::class => 5,
     BubbleFish::class => 3,
     CatFish::class => 2,
     ClownFish::class  => 1,
@@ -25,15 +24,13 @@ $animals = [
     Dove::class  => 2
 ];
 
-$fish = new Fish("Fish");
 
-
-echo $fish->getNoise();
-
-foreach($animals as $animale => $quantite){
+foreach($animalQuantite as $animale => $quantite){
     for($i=0;$i<$quantite;$i++){
         $animals = new $animale($animale);
-        echo "\n" . $animale . " " . $animals->getNoise() . " " . $quantite . "\n"; 
+        Zoo::addAnimal($animals);
+    //     echo "\n" . $animale . " " . $animals->getNoise() . " " . $quantite . "\n"; 
     }
 }
 
+Zoo::visitTheZoo();

@@ -3,8 +3,8 @@
 namespace App\Animals;
 
 use App\Animal;
-
-class BubbleFish extends Fish{
+use App\Interfaces\CanSwim;
+class BubbleFish extends Fish implements CanSwim {
    
 
 }
